@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html oncontextmenu="alert('right click not allowed');return false;">
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="profile.css">
+	<link rel="stylesheet" href="animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+	contact
+	</title>
+	</head>
+	<body style="padding:0;margin:0;">	
+	<img src="images/trangle.png" id="trangle">
+	<div id="box" style="width:8%;height:100px;border:1px solid #ccc;float:left;position:absolute;z-index:1;border-radius:100%;left:10px;top:-90px;box-shadow:0px 0px 10px gray;">
+	</div>
+	<h1 align="center" style="font-family:calibri;position:relative;color:blue;">private contacts</h1>
+	<div style="width:1%;height:100px;position:relative;left:40%;float:left;">
+		<i class="fa fa-plus-circle" style="color:rgb(255,116,102);font-size:40px;"></i>
+	</div>
+	<div style="width:22%;height:300px;padding:10px;box-sizing:border-box;float:left;border-left:2px solid rgb(255,116,102);border-bottom:2px solid rgb(255,116,102);position:relative;left:40%;top:42px;">
+	
+	<form autocomplete="off" id="reset">
+	<input type="text" name="fullname" id="fname" placeholder="enter your full name"><br><br>
+	<input type="number" name="number" id="fnumber" placeholder="enter primary number" onchange="mobile()"><br><br>
+	<input type="number" name="number" id="snumber" placeholder="enter secondry number" onchange="mobile_two()"><br><br>
+	<input type="button" value="add" id="check" onclick="add_check()"  style="width:28%;margin-left:77%;border:none;background:blue;color:white;">
+	<p id="store_check" style="color:rgb(255,116,102);padding:0;margin:0;display:none;"></p>
+	</form>
+	</div>
+	<!-- start contact list coding!-->
+	<div id="detail" style="width:25%;height:650px;float:left;position:fixed;right:0;top:0;background:black;overflow:scroll;padding:10px;box-sizing:border-box;">
+	
+	<h2 id="contact_list" align="center" style="color:rgb(255,116,102);font-family:calibri;">contacts list</h2>
+	
+	<form autocomplete="off">
+	<input type="search" name="search" placeholder="search contacts here" id="search" oninput="search_data(this)">
+	</form>
+	<div id="all_contact">	
+	
+	
+
+	
+	</div>
+      <div id="contact_footer" style="width:25%;height:20px;position:fixed;bottom:0;right:0;float:left;background:blue;padding:5px;box-sizing:border-box;">
+	  <i title="logout" class="fa fa-sign-out" style="color:yellow;float:left;font-size:15px;margin-right:88%;cursor:pointer;" onclick="contact_logout()"></i>
+	  <i title="restore" class="fa fa-refresh" style="color:yellow;float:left;font-size:15px;cursor:pointer;" onclick="restore()"></i>
+	  </div>
+	</div>
+	<!-- end contact list coding!-->
+	
+	<!--start restore coding!-->
+
+	<div id="restore" style="width:75%;height:650px;background:white;float:left;position:fixed;top:0;z-index:1;display:none;">
+	<h1 align="center" id="text" style="color:rgb(255,116,102);position:relative;">DELETED CONTACTS</h1>
+	<i class="fa fa-times-circle" style="color:rgb(255,116,102);position:absolute;right:0;font-size:20px;cursor:pointer;top:0;" onclick="cut()"></i>
+	<table id="cont" style="width:65%;height:auto;position:relative;left:20%;top:20px;border-collapse:collapse;">
+	
+	<tr>
+	<td>Contacts Name</td>
+	<td>First Number</td>
+	<td>Second Number</td>
+	<td>Restore Now</td>
+	</tr>
+	
+	
+	
+	</table>
+	</div>
+	<!--end restore coding!-->
+
+	<script src="contact.js"></script>
+	</body>
+	</html>

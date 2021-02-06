@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="business.css">
+	<link rel="stylesheet" href="../animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+	save
+	</title>
+	</head>
+	<body>
+	<div id="box" style="width:500px;height:300px;border:1px solid red;overflow:scroll;" contenteditable="true" spellcheck="false">
+	</div><br>
+	<form>
+	<input type="text" name="file name" placeholder="type file name tosave" style="width:150px;height:40px;border:1px solid black;float:left;margin-right:10px;" id="name">	
+	</form>
+	<button id="btn" style="float:left;width:150px;height:40px;" onclick="save()">save text file</button>
+	<input id="data" type="file" accept=".txt" style="width:100px;float:left;">
+	<script>
+	function save()
+	{
+	var text=document.getElementById("box").innerHTML;
+	var x=new Blob([text],{type:'text/plain'});
+	var name=document.getElementById("name").value;
+	var a=document.createElement("A");
+	a.href=URL.createObjectURL(x);
+	a.download=name;
+	a.click();
+	}
+	var file=document.getElementById("data");
+	file.onchange=function()
+	{
+	var reader=new FileReader();
+	reader.readAsText(this.files[0],"UTF-8");
+	reader.onload=function()
+	{
+	document.getElementById("box").innerHTML=reader.result;
+	}
+	}
+	
+	</script>
+	</body>
+	</html>

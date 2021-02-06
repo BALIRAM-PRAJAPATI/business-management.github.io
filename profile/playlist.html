@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="profile.css">
+	<link rel="stylesheet" href="animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+	playlist
+	</title>
+	</head>
+	<body>
+	<div id="bigbox" style="width:80%;height:90vh;background:#ccc;;margin-top:50px;box-shadow:0px 0px 10px gray;position:relative;left:10%;border-radius:5px;float:left;">
+	<div id="playlist_header">
+	<div style="float:left;width:45vw;height:50px;">
+	<h1 style="padding:2%;margin:0;font-size:2vw;" id="current"></h1>
+
+	</div>
+	<div style="float:left;width:33vw;height:50px;">	
+	<i id="plus" class="fa fa-share" title="share"></i>
+	<i id="plus" class="fa fa-thumbs-o-down" title="dislike video"></i>
+	<i id="plus" class="fa fa-thumbs-o-up" title="like video"></i>
+	</div>
+	</div>
+	<div style="width:50vw;height:450px;position:relative;left:0;top:3.8vw;">
+	<video id="video_player" style="width:50vw;height:360px;position:absolute;left:0;top:0;">
+	
+	<source id="origin">
+	</source>
+	<input type="file" accept="video/*" id="file">
+	</video>
+	
+	<div id="video_footer" style="width:50vw;height:50px;background:#ccc;position:absolute;top:80.2%;">
+	<div style="width:25%;height:50px;float:left;">
+	<i id="play" class="fa fa-play" title="play"></i>
+	<i id="stop" class="fa fa-stop-circle" title="stop"></i>
+	<i id="replay" class="fa fa-repeat" title="replay video"></i>
+	</div>
+	<div id="progress_bar" style="width:50%;height:35px;border:1px solid white;float:left;background:white;margin-top:2px;margin-right:.5vw;position:relative;">
+	<div id="buffer" style="width:0;height:35px;position:absolute;background:green;"></div>
+	<div id="progress" style="width:0;height:35px;background:rgb(255,116,102);position:absolute">
+	
+	</div>
+	</div>
+
+	<i id="gear" class="fa fa-gear" title="setting"></i>
+	<i id="volume" class="fa fa-volume-up" title="volume"></i>
+	<i id="download" class="fa fa-download" title="download"></i>
+	<i id="fullscreen" class="fa fa-arrows-alt" title="fullscreen"></i>
+	
+	<input type="range" max="1" min="0" step=".1" id="slider">
+	
+	</div>
+	</div>
+	
+	<h1  style="margin:0;padding:0;font-size:2vw;position:fixed;top:0;right:0;top:20%;right:25%;">favorite songs</h1>
+	
+	<i id="circle" class="fa fa-plus-circle" style="font-size:2vw;position:fixed;top:20%;right:12%;cursor:pointer;" title="add songs"></i>
+	<div id="songs" style="width:29%;height:400px;float:left;position:fixed;left:60%;top:150px;box-sizing:border-box;overflow:scroll;overflow-x:hidden;">
+	<ol>		
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	<li id="user_songs">ch-1st inroduction to html language</li>
+	</ol>
+	</div>
+	
+	<!-- start setting coding!-->
+	<div id="setting_box">
+	<p style="padding:0;margin:0;font-weight:bold;">speed<span id="span">: 1</span></p>
+	<button id="reset_btn">reset</button>
+	
+	<input type="range" min=".5" max="10" value="1" id="range_slider" step=".1">
+	<pre><i id="clone" class="fa fa-clone" style="margin-left:5px;cursor:pointer;">    Mini player</i></pre>
+	<input type="color" id="c_color" style="width:10%;height:1.5vw;border:none;margin-bottom:1.5vw;cursor:pointer;position:relative;">&nbsp;container theme<br>
+	<input type="color" id="i_color" style="width:10%;height:1.5vw;border:none;margin-bottom:1.5vw;cursor:pointer;position:relative;">&nbsp;icon theme<br>
+	<input type="color" id="t_color" style="width:10%;height:1.5vw;border:none;margin-bottom:1.5vw;cursor:pointer;position:relative;">&nbsp;text theme<br><br>
+	<input type="button" id="r_btn" value="reset" style="width:30%;height:2vw;border:none;background:#ccc;color:blue;margin-left:5px;cursor:pointer;">
+	</div>
+	<!-- end setting coding!-->
+
+	</div>
+	<!--start mini video coding!-->
+	<div id="mini">	
+	
+	<i class="fa fa-clone" id="maxmize" style="position:absolute;right:0;z-index:200;top:0;cursor:pointer;"></i><br>
+	
+	<video id="mini_video" width="256" height="144">
+	<source id="origin_mini">
+	</source>
+	</video>
+	</div>
+	<!-- end mini video coding!-->
+	
+	
+	
+	
+	<script src="playlist.js"></script>
+	</body>
+	</html>

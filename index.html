@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="a.css">
+	<link rel="stylesheet" href="animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+	project_one
+	</title>
+	<noscript>
+	<h1>PLEASE ENABLE JAVASCRIPT</h1>
+	<style>
+	body{
+	background:black;
+	}
+	#webpage{
+	display:none;
+	}
+	h1{color:white;font-size:90px;}
+	}
+	</style>
+	</noscript>
+	</head>
+	<body>
+	<div id="webpage">
+	<div id="banner" style="position:relative;bottom:0;top:180px;left:40%;bottom:200px;width:300px;height:300px;">
+	<img id="img" src="images/logo.png">
+	<i class="fa fa-play-circle-o animated infinite swing" onclick="wap()" style="position:absolute;bottom:0;font-size:30px;left:50%;cursor:pointer;"></i>
+	</div>
+	<div id="box">
+	<i class="fa fa-close" style="font-size:20px;background:black;color:white;float:right;cursor:pointer;" onclick="demo()"></i>
+	<h1 align="center" style="color:white;padding:0;margin:0;">LOGIN USER !</h1><br>
+	<form id="login" autocomplete="off" onsubmit="return lgn()">
+	<input type="text" name="username" id="username" required="required" placeholder=" &#xf2bd; username"><br><br>
+	<input type="password" name="password" id="password" required="required" placeholder=" &#xf023; password"><br><br>
+	<input type="submit" value="login" id="login" style="width:100px;height:50px;margin-left:68%;border:none;background:white;cursor:pointer;">
+	</form>
+	
+	<form id="signup" autocomplete="off" onsubmit="return user()">
+	<h1 align="center" style="color:white;padding:0;margin:0;">SIGN UP USER !</h1><br>
+	<input type="text" name="yourname" id="yname" required="required" placeholder=" &#xf2bd; your name"><br><br>
+	<input type="email" name="email" id="email" required="required" placeholder=" &#xf0e0; email" onchange="return check()" class="animated"><br><br>
+	<p id="two" style="color:black;font-size:15px;padding:0;margin:0;"></p>
+	<input type="password" name="password" id="pwd" required="required" placeholder=" &#xf023; password"><br><br>
+	<input type="number" name="mobileno" id="mobile" required="required" placeholder=" &#xf10b; mobile no"><br><br>
+		<p id="one" style="color:black;font-size:15px;"></p>
+	<input type="submit" value="sign up" id="sign" style="width:100px;height:50px;margin-left:68%;border:none;background:white;">
+
+	</form>
+	</div>
+	</div>
+	
+    <script src="a.js"></script>
+   </body>
+   </html>

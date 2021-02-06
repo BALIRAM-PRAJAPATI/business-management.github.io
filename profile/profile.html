@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="refresh" content="30">
+	<link rel="stylesheet" href="profile.css">
+	<link rel="stylesheet" href="../animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+	profile
+	</title>
+	</head>
+	<body>
+	
+	<div id="path" style="background:black;width:100%;height:700px;position:fixed;">
+	<div id="box">
+	<img src="../images/logo.png" width="200" height="200">
+	<p id="asd" style="padding:0;margin:0;color:red;font-size:40px;position:absolute;top:180px;left:160px;"></p>
+	<div id="sp">
+	<input type="file" accept="image/*" id="file" onchange="upload()" >
+	<i class="fa fa-upload" id="upld" style="position:absolute;top:0;left:40px;top:30px;font-size:50px;color:red;cursor:pointer;"></i>
+	<span style="padding:0;margin:0;position:absolute;top:100px;left:40px;color:green;font-size:15px;" id="pic">upload photo</span>
+	</div>
+	<i class="fa fa-forward" id="three" style="position:absolute;left:350px;font-size:50px;bottom:3px;color:rgb(255,116,102);cursor:pointer;display:none;"></i>
+	</div>
+	</div>
+	<div id="shiv">
+	<div id="profile_home">
+	<!--start main page_name coding!-->
+	<div id="profile_header" style="width:100%;height:150px;background:rgb(255,116,102);float:left;position:fixed;">
+	<h1 id="profile_pic" align="center" style="margin:0;padding:0;font-family:calibri;font-size:40px;color:white;margin-top:20px;"></h1>
+	</div>
+	<!--enad main page_name coding!-->
+	<!--start main page image coding!-->
+	<div id="profile_box" style="width:120px;height:120px;border:2px solid #ccc;position:relative;left:45%;border-radius:50%;top:float:left;top:90px;">
+	</div>
+	<!--end main page image coding!-->
+	
+	<!--start section coding!-->
+	<div id="control" style=" width:100%;height:300px;border;margin-top:20px;margin-left:20px;">
+	<div id="business">
+	<i class="fa fa-briefcase" style="font-size:20px;"></i>
+	<p style="padding:0;margin:0;font-family:calibri;color:blue;cursor:pointer;font-size:10px;" onclick="wap()">Business</p>
+	</div>
+	<div id="about">
+	<i class="fa fa-pencil" style="font-size:20px;"></i>
+	<p style="padding:0;margin:0;font-family:calibri;color:blue;cursor:pointer;font-size:10px;">AboutMe</p>
+	</div>
+	<div id="contact">
+	<i class="fa fa-phone" style="font-size:20px;"></i>
+	<p style="padding:0;margin:0;font-family:calibri;color:blue;cursor:pointer;font-size:10px;" onclick="contact()">Contacts</p>
+	</div>	
+	<div id="playlist">
+	<i class="fa fa-play" style="font-size:20px;"></i>
+	<p style="padding:0;margin:0;font-family:calibri;color:blue;cursor:pointer;font-size:10px;" onclick="playlist()">playlist</p>
+	</div>	
+	<div id="logout">
+	<i class="fa fa-sign-out" style="font-size:20px;"></i>
+	<p onclick="logout()" style="padding:0;margin:0;font-family:calibri;color:blue;cursor:pointer;font-size:10px;">Logout</p>
+	<h1 id="please" style="padding:0;margin:0;font-family:calibri;color:blue;clear:left;margin-left:-800px;margin-top:10px;"></h1> 
+	</div>
+	</div>	
+	<!--enad section coding!-->
+	<!--start footer coding!-->
+	<div id="footer">
+	<img src="../images/logo.png" width="50" height="50">
+	</div>
+	<!--end footer coding!-->
+	</div>	
+	</div>
+	<script src="profile.js"></script>
+	</body>
+	</html>

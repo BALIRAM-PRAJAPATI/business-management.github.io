@@ -1,0 +1,165 @@
+@charset "utf-8";
+*{box-sizing:border-box;}
+body{padding:0;margin:0;}
+body::-webkit-scrollbar{
+	width:10px;
+}
+body::-webkit-scrollbar-track{
+	background:rgb(255,116,102);
+}
+body::-webkit-scrollbar-thumb{
+	background:blue;
+}
+	#check{
+	width:450px;
+	height:80px;
+     border-left:5px solid blue;
+	 border-right:5px solid blue;
+	 border-top:5px solid blue;
+	 border-bottom:5px solid transparent;
+	 margin:50px auto;
+	 position:relative;
+	 left:15px;
+	 background:white;
+	 padding:5px;
+	 z-index:1000;
+	}
+	#tabs{
+		width:120px;
+		height:50px;
+		border:none;
+		
+		color:rgb(255,116,102);
+		font-family:calibri;
+		box-shadow:0px 8px 16px 0px gray;
+		font-size:2vw;
+		cursor:pointer;
+		margin-left:15%;
+		margin-top:5px;
+	}
+	#tabs.active{
+		background:radial-gradient(blue,yellow,green);
+		color:black;
+		
+	}
+	#inner{
+	width:850px;
+	height:auto;
+     border-left:2px solid #ccc;
+	 border-right:2px solid #ccc;
+	 border-top:5px solid blue;
+	 border-bottom:2px solid #ccc;
+	 left:20%;
+	 top:-55px;
+	 position:relative;
+	 z-index:100;
+	 
+	 
+	}
+	#inner >*{
+		display:none;
+	}
+	
+	#p_group{width:170px;height:150px;position:fixed;border:2px solid #ccc;left:31%;top:67.5%;display:none;box-shadow:0px 0px 8px 0px gray;background:white;padding:8px;overflow-x:hidden;overflow-y:scroll;color:black;font-weight:bold;}
+	#sales_p_group{width:170px;height:150px;position:fixed;border:2px solid #ccc;left:31%;top:67.5%;display:none;box-shadow:0px 0px 8px 0px gray;background:white;padding:8px;overflow-x:hidden;overflow-y:scroll;color:black;font-weight:bold;}
+	#p_group::-webkit-scrollbar{
+		width:5px;
+	}
+	#p_group::-webkit-scrollbar-track{
+		background:blue;
+	}
+	#p_group::-webkit-scrollbar-thumb{
+		background:rgb(255,116,102);
+		
+	}
+#p_group p{
+	padding:8px;
+}
+#cal_table td{
+	padding:4px;
+}
+#search_v::placeholder{
+	color:rgb(255,116,102);
+	padding:5px;
+}
+#sales_search_v::placeholder{
+	color:rgb(255,116,102);
+	padding:5px;
+}
+/* start print coding*/
+@media print{
+	.remove{
+		display:none;
+		}
+		#p_group,#sales_p_group{
+			opacity:0;
+		}
+	#p_group p,#sales_p_group p{
+	display:none;
+}
+#tabs{
+	display:none;}
+	#check{
+	 border-left:none;
+	 border-right:none;
+	 border-top:none;
+	 border-bottom:none;
+	}
+	#inner{
+		border:none;
+	}
+	#purchase,#sales{
+		
+		
+		margin-left:-100px;
+	}
+	#pls,#sales_pls{
+		display:none;
+	}
+	
+	#search_table td,#sales_search_table td{
+		height:auto;
+		color:black;
+		font-size:15px;
+		font-family:bold;
+		border:2px solid black;
+		
+	}
+	#add_table tr td:last-child,#sales_add_table tr td:last-child{
+		display:none;
+	}
+	#add_table td,#sales_add_table td{
+		height:auto;
+		border:2px solid black;
+		color:black;
+	   font-size:15px;
+				
+	
+	}
+	#cal_table td,#sales_cal_table td{
+		color:black;
+		border:2px solid black;
+		font-size:15px;
+	}
+	#cal_table,#sales_cal_table{
+		height:auto;
+		border:2px solid black;
+		color:black;
+		font-size:15px;
+	}
+	#rem,#sales_rem{
+		display:none;
+	}
+	.item,.qty,.rate,.sp,.amount,.per{
+		border:none;
+	}
+	.per{
+		-webkit-appearance:none;
+		appearance:none;
+	}
+	#one,#two,#three,#four,#five,#six{
+		background:inherit;
+		color:black;
+		font-weight:bold;
+	}
+}

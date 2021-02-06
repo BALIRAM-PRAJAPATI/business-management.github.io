@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="business.css">
+	<link rel="stylesheet" href="../animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+	manage
+	</title>
+	</head>
+	<body>
+
+	<img class="remove" src="images/trangle.png" style="position:fixed;top:0;left:0">
+	<div id="box_image" class="remove">
+	</div>
+	<h1 class="remove" align="center" style="padding:0;margin:0;position:relative;margin-bottom:5px;">Business Management system</h1>
+	<h4 class="remove" align="center" style="padding:0;margin:0;position:relative;">Manage your all business details like ledger, voucher, tax, balance sheet and many more</h1>
+	<div class="remove" id="check" style="width:180px;height:180px;border:25px groove rgb(65,162,252);position:absolute;left:16vw;top:14vw;border-radius:50%;box-shadow:0px 0px 10px gray;">	
+	
+	</div>
+	<h1 class="remove" id="name" style="position:absolute;left:40%;top:40%;color:rgb(255,116,102);"></h1>
+	<div class="remove" id="main" style="width:22%;height:32vw;border-top:20px groove rgb(65,162,252);border-bottom:20px groove rgb(65,162,252);position:fixed;right:19vw;top:8vw;box-shadow:0px 0px 10px gray;border-right:1px solid #ccc;border-left:1px solid #ccc;padding:10px;overflow-y:scroll;overflow-x:hidden;">
+	
+	<div id="measure">
+	<i class="fa fa-balance-scale" id="balance"></i>
+	
+	<h2 align="center" style="padding:0;margin:0;position:relative;top:-2.5vw;left:2vw;font-family:calibri;cursor:pointer;">unit of measure</h2>
+	</div>
+	<div id="measure_div" style="width:100%;height:190px;border:1px solid #ccc;box-shadow:0px 0px 10px gray;float:left;margin-bottom:27px;padding:13px;cursor:pointer;position:relative;display:none;">
+	<i id="balance_close" class="fa fa-close" style="position:relative;left:90%;top:-1vw;color:white;font-size:2vw;"></i>
+	<p id="update" style="padding:0;margin:0;color:red;position:relative;left:10%;top:-2vw;color:red;font-size:2vw;display:none;">update successfully</p>
+	<i id="close_btn" style="position:relative;left:90%;top:-1vw;color:white;font-size:2vw;"></i>
+	<form id="wap" autocomplete="off">
+	<input id="m_s" type="text" name="symbol" placeholder="Symbol"><br>
+	<input id="m_f" type="text" name="formal name" placeholder="Formal Name"><br>
+	<input class="remove" id="m_sub" type="submit" value="set" style="background:rgb(255,116,102);">
+	
+	</form>
+	<button id="edit_m" title="edit unit" style="width:30%;height:40px;position:relative;left:50px;top:5px;color:black;font-size:2vw;border:none;background:white;cursor:pointer;display:none;">Edit Unit</button>
+	<i id="trash" title="delete unit" class="fa fa-trash" style="display:none;font-size:40px;color:blue;position:relative;left:90%;top:-34px;cursor:pointer;"></i>
+	<select id="unit_select" name="unit" style="width:100%;height:40px;display:none;position:absolute;bottom:0;color:black;font-size:2vw;background:yellow">
+	<option value="select unit">select unit</option>
+	</select>
+	</div>
+	<div id="voucher">
+	<i class="fa fa-money" id="sales"></i>
+	<h2 id="c_sale" align="center" style="padding:0;margin:0;position:relative;top:-2.5vw;left:2vw;font-family:calibri;cursor:pointer;">sales of voucher</h2>
+	</div>
+	<div id="tax" style="height:70px;">
+	<i class="fa fa-calculator" id="setup"></i>
+	<h2 id="tax_set" align="center" style="padding:0;margin:0;position:relative;top:-2.5vw;left:2vw;font-family:calibri;cursor:pointer">Taxsetup</h2>
+	<div id="hid" style="display:none">
+	<form id="demo" autocomplete="off">
+	<input id="tax_name" type="text" name="tax" placeholder="tax name" required="required"><br>
+	<input id="percent" type="text" name="tax amount" placeholder="2%" required="required"><br>
+	<input class="remove" id="m_super" type="submit" value="done" style="background:rgb(255,116,102);">
+	
+	</form>
+	</div>
+	</div>
+	<div id="shut">
+	<i class="fa fa-window-close" id="close"></i>
+	<h2 id="shut_cmp" align="center" style="padding:0;margin:0;position:relative;top:-2.5vw;left:2vw;font-family:calibri;cursor:pointer;">shut company</h2>
+	</div>
+	</div>
+	<div id="manage_box" style="display:none;width:18%;height:42vw;border-top:20px groove rgb(65,162,252);border-bottom:20px groove rgb(65,162,252);position:fixed;right:0;top:2vw;box-shadow:0px 0px 10px gray;border-right:1px solid #ccc;border-left:1px solid #ccc;padding:4px;">
+	<h1 style="color:rgb(255,116,102);">Manage Voucher</h1>
+	<input type="text" id="s_voucher" placeholder=" enter voucher email id" style="width:100%;height:40px;border:1px solid pink;">
+	</div>
+	<div id="voucher_box" style="width:50%;height:40vw;position:fixed;left:9%;top:4vw;border:3px solid #ccc;z-index:100;background:white;overflow-y:scroll;display:none;">
+	<div class="remove" id="cls" style="width:15%;height:2vw;border:2px solid #ccc;position:absolute;left:80%;top:2vw;color:green;bottom:5px;">
+	<i id="close_voucher" class="fa fa-close" style="font-size:1vw;position:relative;left:1%;cursor:pointer;"><span style="cursor:auto;padding:0;margin:0;"> close invoice</span></i>
+	</div>
+	<div class="remove" id="cl" style="width:15%;height:2vw;border:2px solid #ccc;position:absolute;left:5%;top:2vw;color:green;bottom:5px;display:none;">
+	<i id="delete_voucher" class="fa fa-close" style="font-size:1vw;position:relative;left:1%;cursor:pointer;"><span style="cursor:auto;padding:0;margin:0;"> delete invoice</span></i>
+	
+	</div>
+	<table style="width:90%;position:relative;top:5vw;left:2.5vw;">
+	<tr>
+	<td colspan="2" style="width:100%;height:2vw;border:1px solid #323232;background:black;padding5px;color:white;font-family:calibri;">
+	<p style="padding:0;margin:0;float:left;margin-right:60%;" id="voucher_no"></p>
+	<p id="date" style="padding:0;margin:0;float:left;">Date:</p>
+	</td>	
+	</tr>
+	<tr>
+	<td id="address_voucher" style="width:80%;height:7vw;border:1px solid #323232;"></td>
+	<td id="logo_voucher" style="width:20%;border:1px solid #323232;"></td>	
+	</tr>
+	</table>
+	<div style="width:90%;height:auto;position:relative;top:6vw;left:2.5vw;padding:5px;">
+	<form autocomplete="off">
+	Name<br />
+	<input id="one" type="text" name="name"><br>
+	Email<br>
+	<input id="two" type="email" name="email" placeholder="type your email here"><br>
+	Mobile No<br>
+	<input id="three" type="number" name="mobile no" placeholder="type your mobile no here"><br>
+     Address<br>
+    <textarea id="four">
+    </textarea>	
+	</form>
+	
+	<table width="100%" border="1" id="voucher_table" style="border-collapse:collapse;padding:5px;">
+	<tr>
+	<td id="list">Description</td>
+	<td id="list">price</td>
+	<td id="list">qty</td>
+	<td id="list">unit</td>
+	<td id="list">amount</td>
+	<td id="list">Del</td>
+	</tr>
+		 
+	</table>
+	<i id="add_voucher" class="fa fa-plus-circle remove" title="add item" style="font-size:2vw;position:relative;top:2vw;cursor:pointer"></i>
+	<table border="1" style="width:100%;margin-top:2vw;">
+	<tr>
+	<td width="70%" style="padding:1vw;">
+	<i id="sub" class="fa fa-rupee" style="float:right;">&nbsp&nbsp0.00</i>
+	<p style="position:relative;margin:0;padding:0;float:right;">Subtotal&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>	
+	</td>
+	</tr>
+	<tr>
+	<td width="70%" style="padding:1vw;">
+	<p id="subtotal" style="position:relative;margin:0;padding:0;float:right;"></p>
+	<p id="p_tax" style="position:relative;margin:0;padding:0;float:right;">Tax(0%)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>	
+	</td>
+	</tr>
+	<tr>
+	<td width="70%" style="padding:1vw;">
+	<i class="fa fa-rupee" style="float:right;" id="total">&nbsp&nbsp0.00</i>
+	<p style="position:relative;margin:0;padding:0;float:right;">Total&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>	
+	</td>
+	</tr>
+	<tr>
+	<td width="70%" style="padding:1vw;">
+	
+	<input id="give" type="number" name="paid" style="float:right;border:1px solid red;width:20%;">
+	<p id="paid" style="position:relative;margin:0;padding:0;float:right;">Paid Amount&nbsp&nbsp</p>
+	</td>
+	</tr>
+	<tr>
+	<td width="70%" style="padding:1vw;">
+	<i class="fa fa-rupee" style="float:right;" id="pay">&nbsp&nbsp0.00</i>
+	<p style="position:relative;margin:0;padding:0;float:right;">Balance due&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>	
+	</td>
+	</tr>
+	<td width="70%" style="padding:1vw;border:none;display:none;" id="v_print">
+	
+	<button style="width:50px;height:auto;position:absolute;margin:0;padding:0;cursor:pointer;left:90%;top:96.5%;">getbill !</button>	
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	</div>
+	
+	
+	<script src="b_manage.js"></script>
+	</body>
+	</html>

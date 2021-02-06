@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="update.css">
+	<link rel="stylesheet" href="voucher.css">
+	<link rel="stylesheet" href="../../animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+    voucher
+	</title>
+	</head>
+	<body>
+	<img class="remove" src="../images/trangle.png" style="position:fixed;top:0;left:0">
+	<div id="box_image" class="remove" style="position:fixed;">
+	</div>
+	<h1 class="remove" align="center" style="padding:0;margin:0;position:relative;margin-bottom:5px;">Business Management system</h1>
+	<h4 class="remove" align="center" style="padding:0;margin:0;position:relative;">Manage your all business details like ledger, voucher, tax, balance sheet and many more</h1>
+	<h4 class="remove" style="color:blue;position:absolute;left:35%;top:11%;">business mode:accounts with inventry</h4>
+	<span class="remove" id="date" style="position:absolute;left:55%;top:15%;color:rgb(255,116,102);"></span>
+	<span class="remove" id="time" style="position:absolute;left:65%;top:15%;color:rgb(255,116,102);"></span>
+	<div id="cmp_logo" style="display:none;"></div>
+	<div id="cmp_name" style="display:none;">
+	</div>
+	<div id="check">
+	<button id="tabs">purchase</button>
+	<button id="tabs">sales</button>
+	</div>
+	<div id="inner">
+	<div id="purchase" class="hide" style="width:100%;height:auto;padding:10px;">
+	<table id="search_table" border="1" style="width:100%;height:auto;border-collapse:collapse;margin-bottom:10px;">
+	<tr class="remove">
+	<td colspan="3" height="40" style="padding:8px;">
+	<input type="number" id="search_v" placeholder="search voucher and edit" style="width:100%;height:35px;outline-style:none;"
+	</td>
+	<td align="center" colspan="1" height="40">
+	<i title="delete voucher" id="delete_v" class="fa fa-trash" style="color:rgb(255,116,102);font-size:33px;cursor:pointer"></i>
+	</td>
+	</tr>
+	<tr>
+	<td id="cmp_detail" colspan="3" height="80" style="padding:8px;">
+	</td>
+	<td colspan="1" height="80">
+	<img  id="cmp_img" style="margin-left:4px;height:80px;background-size:cover;">
+	</td>
+	</tr>
+	<tr>
+	<td width="15%" height="25" style="background:black;color:white;">
+	purchase no:
+	</td>
+	<td id="godown" width="60%" height="25">
+	voucher-no:1
+	</td>
+	<td width="15%" height="25" style="background:black;color:white;">
+	Date
+	</td>
+	<td width="10%" height="25">
+	<p id="date_p" style="padding:0;margin:0;">
+	</p>
+	</td>
+	</tr>
+	<tr>
+	<td width="15%" height="25" style="background:black;color:white;">
+	party a/c name:
+	</td>
+	<td width="60%" height="25" style="padding:4px;">	
+	<input id="p_input" type="text" autocomplete="off">	
+	</td>
+	<td width="15%" height="25" style="background:black;color:white;">
+	current-balance
+	</td>
+	<td id="current_balance" width="10%" height="25">
+	
+	</td>
+	</tr>
+	</table>
+	<table id="add_table" border="1" style="width:100%;height:auto;border-collapse:collapse;">
+	<tr>
+	<td id="one" align="center" width="25%" height="25" style="background:black;color:white;">
+	Item
+	</td>
+	<td id="two" align="center" width="25%" height="25" style="color:white;background:black;">
+	Quantity
+	</td>
+	<td  id="three" align="center" width="10%" height="25" style="background:black;color:white;">
+	Rate
+	</td>
+	<td id="four" align="center" width="10%" height="25" style="background:black;color:white;">
+	Sp
+	</td>
+	<td id="five" align="center" width="10%" height="25" style="color:white;background:black;">
+	Per
+	</td>
+	<td id="six" align="center" width="10%" height="25" style="color:white;background:black;">
+	Amount
+	</td>
+	<td width="10%" height="25" style="color:white;background:black;" align="center">
+	Delete
+	</td>
+	</tr>
+	</table>
+	<button id="pls" class="fa fa-plus-circle" style="margin-top:10px;color:black;border:2px solid black;padding:2px;cursor:pointer;">&nbsp Add Item</button>
+    <div id="p_group"> 
+	</div>
+	<table id="cal_table" border="1" width="100%" height="150" style="margin-top:10px;border-collapse:collapse;">
+	<tr>
+     <td width="30%" height="100" style="padding:8px;">
+	 <form autocomplete="off">
+	 <h3 style="padding:0;margin:0;">Supplier details</h3><br>
+	 <input type="text" placeholder="enter name" id="s_name" style="width:100%;height:30px;margin-bottom:10px;">
+	 <input type="number" placeholder="enter mobile number" id="s_number" style="width:100%;height:30px;margin-bottom:10px;">
+	 <textarea id="s_address" cols="30" rows="4">
+	 </textarea>
+	 </form>
+	 </td>	
+	<td width="30%" height="100" class="remove">
+	
+	<fieldset style="height:140px;width:100%;float:right;padding:4px;">
+	<legend id="p_legend">Tax Setup</legend>
+	<form id="p_frm" autocomplete="off">
+	<input id="tax_name" type="text" placeholder="tax name" style="width:100%;height:30px;margin-bottom:5px;">
+	<input id="tax" type="text" placeholder="tax" style="width:100%;height:30px;margin-bottom:5px;">
+	<input type="submit" value="set" style="width:100%;height:30px;margin-bottom:3px;">
+	</form>
+	</fieldset>
+	</td>
+	<td width="40%" height="100">
+	<table id="m_table" border="1" width="100%" style="border-collapse:collapse;height:auto;">
+	<tr>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;">Subtotal</p>
+	</td>
+	<td width="50%" height="20">
+	<p id="subtotal" style="padding:0;margin:0;">00.00</p>
+	</td>
+	</tr>
+	<tr>
+	<td id="p_tax" width="50%" style="height:auto;">
+	
+	</td>
+	<td id="tax_amount" width="50%" style="height:auto;">
+	
+	</td>
+	</tr>
+	<tr>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;">Total</p>
+	</td>
+	<td width="50%" height="20">
+	<p id="total" style="padding:0;margin:0;">00.00</p>
+	</td>
+	</tr>
+	<tr>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;">Paid</p>
+	</td>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;"><input id="paid" type="number" placeholder="00.00" style="width:100%;"></p>
+	</td>
+	</tr>
+	<tr>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;">Balance dues
+	</td>
+	<td width="50%" height="20">
+	<p id="balance" style="padding:0;margin:0;">00.00</p>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	<tr>
+	<table width="100%" height="50" border="1" style="border-collapse:collapse;">
+	<tr id="rem">
+	<td width="50%" height="40" style="padding:10px;">
+	<p id="save_v" style="padding:0;margin:0;margin-left:40%;color:rgb(255,116,102);"></p> 
+	</td>
+	<td width="50%" height="40" style="padding:10px;">
+	<button style="border:none;background:black;color:white;margin-left:74%;width:100px;height:40px;font-family:"righteous";font-size:25px;"><span id="save_btn" style="cursor:pointer;">save/print</span></button>
+	</td>
+	</tr>
+	</table>
+	</tr>
+	</table>
+	</div>
+	<div id="sales" class="hide" style="width:100%;height:auto;padding:8px;">
+	<!-- start sales coding-->
+	<table id="sales_search_table" border="1" style="width:100%;height:auto;border-collapse:collapse;margin-bottom:10px;">
+	<tr class="remove">
+	<td colspan="3" height="40" style="padding:8px;">
+	<input type="number" id="sales_search_v" placeholder="search voucher and edit" style="width:100%;height:35px;outline-style:none;"
+	</td>
+	<td align="center" colspan="1" height="40">
+	<i title="delete voucher" id="sales_delete_v" class="fa fa-trash" style="color:rgb(255,116,102);font-size:33px;cursor:pointer"></i>
+	</td>
+	</tr>
+	<tr>
+	<td id="sales_cmp_detail" colspan="3" height="80" style="padding:8px;">
+	</td>
+	<td colspan="1" height="80">
+	<img  id="sales_cmp_img" style="margin-left:4px;height:80px;background-size:cover;">
+	</td>
+	</tr>
+	<tr>
+	<td width="15%" height="25" style="background:black;color:white;">
+	sales no:
+	</td>
+	<td id="sales_godown" width="60%" height="25">
+	voucher-no:1
+	</td>
+	<td width="15%" height="25" style="background:black;color:white;">
+	Date
+	</td>
+	<td width="10%" height="25">
+	<p id="sales_date_p" style="padding:0;margin:0;">
+	</p>
+	</td>
+	</tr>
+	<tr>
+	<td width="15%" height="25" style="background:black;color:white;">
+	party a/c name:
+	</td>
+	<td width="60%" height="25" style="padding:4px;">	
+	<input id="sales_p_input" type="text" autocomplete="off">	
+	</td>
+	<td width="15%" height="25" style="background:black;color:white;">
+	current-balance
+	</td>
+	<td id="sales_current_balance" width="10%" height="25">
+	
+	</td>
+	</tr>
+	</table>
+	<table id="sales_add_table" border="1" style="width:100%;height:auto;border-collapse:collapse;">
+	<tr>
+	<td id="one" align="center" width="25%" height="25" style="background:black;color:white;">
+	Item
+	</td>
+	<td id="two" align="center" width="25%" height="25" style="color:white;background:black;">
+	Quantity
+	</td>
+	<td  id="three" align="center" width="12%" height="25" style="background:black;color:white;">
+	Rate
+	</td>
+	
+	<td id="five" align="center" width="13%" height="25" style="color:white;background:black;">
+	Per
+	</td>
+	<td id="six" align="center" width="13%" height="25" style="color:white;background:black;">
+	Amount
+	</td>
+	<td width="12%" height="25" style="color:white;background:black;" align="center">
+	Delete
+	</td>
+	</tr>
+	</table>
+	<button id="sales_pls" class="fa fa-plus-circle" style="margin-top:10px;color:black;border:2px solid black;padding:2px;cursor:pointer;">&nbsp Add Item</button>
+    <div id="sales_p_group"> 
+	</div>
+	<table id="sales_cal_table" border="1" width="100%" height="150" style="margin-top:10px;border-collapse:collapse;">
+	<tr>
+     <td width="30%" height="100" style="padding:8px;">
+	 <form autocomplete="off">
+	 <h3 style="padding:0;margin:0;">customer details</h3><br>
+	 <input type="text" placeholder="enter name" id="sales_s_name" style="width:100%;height:30px;margin-bottom:10px;">
+	 <input type="number" placeholder="enter mobile number" id="sales_s_number" style="width:100%;height:30px;margin-bottom:10px;">
+	 <textarea id="sales_s_address" cols="30" rows="4">
+	 </textarea>
+	 </form>
+	 </td>	
+	<td width="30%" height="100" class="remove">
+	
+	<fieldset style="height:140px;width:100%;float:right;padding:4px;">
+	<legend id="sales_p_legend">Tax Setup</legend>
+	<form id="sales_p_frm" autocomplete="off">
+	<input id="sales_tax_name" type="text" placeholder="tax name" style="width:100%;height:30px;margin-bottom:5px;">
+	<input id="sales_tax" type="text" placeholder="tax" style="width:100%;height:30px;margin-bottom:5px;">
+	<input type="submit" value="set" style="width:100%;height:30px;margin-bottom:3px;">
+	</form>
+	</fieldset>
+	</td>
+	<td width="40%" height="100">
+	<table id="sales_m_table" border="1" width="100%" style="border-collapse:collapse;height:auto;">
+	<tr>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;">Subtotal</p>
+	</td>
+	<td width="50%" height="20">
+	<p id="sales_subtotal" style="padding:0;margin:0;">00.00</p>
+	</td>
+	</tr>
+	<tr>
+	<td id="sales_p_tax" width="50%" style="height:auto;">
+	
+	</td>
+	<td id="sales_tax_amount" width="50%" style="height:auto;">
+	
+	</td>
+	</tr>
+	<tr>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;">Total</p>
+	</td>
+	<td width="50%" height="20">
+	<p id="sales_total" style="padding:0;margin:0;">00.00</p>
+	</td>
+	</tr>
+	<tr>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;">Paid</p>
+	</td>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;"><input id="sales_paid" type="number" placeholder="00.00" style="width:100%;"></p>
+	</td>
+	</tr>
+	<tr>
+	<td width="50%" height="20">
+	<p style="padding:0;margin:0;">Balance dues
+	</td>
+	<td width="50%" height="20">
+	<p id="sales_balance" style="padding:0;margin:0;">00.00</p>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	<tr>
+	<table width="100%" height="50" border="1" style="border-collapse:collapse;">
+	<tr id="sales_rem">
+	<td width="50%" height="40" style="padding:10px;">
+	<p id="sales_save_v" style="padding:0;margin:0;margin-left:40%;color:rgb(255,116,102);"></p> 
+	</td>
+	<td width="50%" height="40" style="padding:10px;">
+	<button style="border:none;background:black;color:white;margin-left:74%;width:100px;height:40px;font-family:"righteous";font-size:25px;"><span id="sales_save_btn" style="cursor:pointer;">save/print</span></button>
+	</td>
+	</tr>
+	</table>
+	</tr>
+	</table>
+	<!-- end sales coding-->
+	</div>
+	</div>
+	<footer class="remove" id="ft" style="width:210px;height:0;background:rgb(255,116,102);position:fixed;bottom:0;left:3%;">
+	<i id="up_icon" class="fa fa-toggle-down animated infinite flash" style="font-size:20px;position:absolute;top:-18px;left:40%;cursor:pointer;"></i>
+	<p style="padding:0;margin:0;margin-bottom:20px;color:black;margin-left:35%;">shortcut keys</p>
+	<p style="padding:0;margin:0;margin-bottom:20px;color:white">open purchase-voucher:&nbsp&nbsp <span style="color:yellow;">alt+p</span></p>
+	<p style="padding:0;margin:0;margin-bottom:20px;color:white">open sales-voucher:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span style="color:yellow;">alt+s</span></p>
+	<p style="padding:0;margin:0;margin-bottom:20px;color:white">add item:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span style="color:yellow;">alt+a</span></p>
+	<p style="padding:0;margin:0;margin-bottom:20px;color:white">supplier details:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span style="color:yellow;">shift+s</span></p>
+	<p style="padding:0;margin:0;margin-bottom:20px;color:white">change field:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span style="color:yellow;">enter</span></p>
+	
+	</footer>
+	
+	<script src="sales.js"></script>
+	<script src="voucher.js"></script>
+	<script src="update.js"></script>
+	</body>
+	</html>

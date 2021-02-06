@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="business.css">
+	<link rel="stylesheet" href="../animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+	business
+	</title>
+	</head>
+	<body>
+	<img src="images/trangle.png" style="position:fixed;top:0;left:0">
+	<div id="box_image">
+	</div>
+	<h1 align="center" style="padding:0;margin:0;position:relative;margin-bottom:5px;">Business Management system</h1>
+	<h4 align="center" style="padding:0;margin:0;position:relative;">Manage your all business details like ledger, voucher, tax, balance sheet and many more</h1>
+	<div id="container">
+	<div id="first_div" style="position:relative;">
+	<i class="fa fa-home" id="home"></i>
+	
+	<h1 align="center" style="padding:0;margin:0;float:left;margin-top:20px;font-family:calibri;cursor:pointer;" id="create">CREATE COMPANY</h1>
+	
+	</div>
+	<nav id="all">
+	<nav id="form">
+	<img src="images/company.jpg" width="342" height="350">
+	</nav>
+	<nav id="frm">
+	<form autocomplete="off" id="success">
+	<input id="cmp_name" type="text" name="company name" placeholder="Company Name" required="required"><br>
+	<input id="mailing" type="text" name="mailing name" placeholder="Mailing Name" required="required"><br>
+	<textarea id="text" placeholder="address"></textarea><br>
+	<input id="mobile" type="number" name="mobile number" placeholder="Mobile Number" required="required"><br>
+	<input id="tel" type="tel" name="Fax Number" placeholder="Fax Number"><br>
+	<input id="email" type="email" name="email" placeholder="Email Id"><br>
+	<input id="website" type="website" name="website" placeholder="website"><br>
+	<h1 style="padding:0;margin:0;color:rgb(255,116,102);">FINANCIAL YEAR</h1><br>
+	<input id="fine" type="date" name="date of birth" placeholder="Date Of Birth" required="required"><br>
+	<h1 style="padding:0;margin:0;color:rgb(255,116,102);">STOCK TYPE</h1><br>
+	<select id="select">
+	<option value="Accounts Only">Accounts Only</option>
+	<option value="Accounts With Inventry">Accounts With Inventry</option>
+	</select>
+	<input type="submit" value="Create Now !" style="background:yellow;margin-bottom:0;border-radius:40px;cursor:pointer;">
+	</form>
+	</nav>
+	</nav>
+	<div id="second_div">
+	<i class="fa fa-trash" id="delete"></i>
+	<h1 id="del" align="center" style="padding:0;margin:0;float:left;margin-top:12px;font-family:calibri;cursor:pointer;">DELETE COMPANY</h1>
+	</div>
+	<div id="third_div">
+	<i class="fa fa-sign-out" id="logout"></i>
+	<h1 align="center" style="padding:0;margin:0;float:left;margin-top:12px;font-family:calibri;cursor:pointer;" onclick="return out()">LOGOUT</h1>
+	
+	</div>
+	<span id="please" style="margin-left:50px;color:blue;font-size:20px;"></span>
+	</div>
+	<div id="check" style="width:30%;height:19vw;border:20px groove yellow;position:absolute;right:1vw;top:5vw;border-radius:50%;background:black;display:none;">
+	
+	<h1 align="center" style="margin-top:65px;padding:0;color:rgb(255,116,102);font-family:calibri;">YOUR COMPANY
+	CREATED SUCCESSFULLY
+	</h1>
+	<button style="margin-left:40%;border:none;width:30%;height:3vw;background:white;color:blue;cursor:pointer;" id="btn">click here</button>
+	</div>
+	
+	<script src="business.js"></script>
+	</body>

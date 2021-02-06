@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en-US">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="update.css">
+	<link rel="stylesheet" href="godown.css">
+	<link rel="stylesheet" href="../../animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>
+    ledger page
+	</title>
+	</head>
+	<body>
+	<img class="remove" src="../images/trangle.png" style="position:fixed;top:0;left:0">
+	<div id="box_image" class="remove">
+	</div>
+	<h1 class="remove" align="center" style="padding:0;margin:0;position:relative;margin-bottom:5px;">Business Management system</h1>
+	<h4 class="remove" align="center" style="padding:0;margin:0;position:relative;">Manage your all business details like ledger, voucher, tax, balance sheet and many more</h1>
+	<h4 style="color:blue;position:absolute;left:35%;top:11%;">business mode:accounts with inventry</h4>
+	<span id="date" style="position:absolute;left:55%;top:15%;color:rgb(255,116,102);"></span>
+	<span id="time" style="position:absolute;left:65%;top:15%;color:rgb(255,116,102);"></span>
+	<fieldset id="le_f">
+	<legend>Ledger Option</legend>
+	<div id="manage_box">
+	<button id="a">Create</button>
+	<button id="b">Edit</button>	
+	<button id="c">Search</button>
+	</div>
+	<div id="cmp_logo" style="position:absolute;top:60%;left:8px;">
+	</div>
+	<div id="cmp_name" style="position:absolute;left:-14px;top:86%;width:250px;">
+	</div>
+	<div id="content_box">
+	<form class="show" id="Create" style="display:none;">
+	<table height="400" id="table_create" width="100%" border="1" style="border-collapse:collapse;margin-bottom:5px;">
+	<tr>
+	<td style="width:40%;height:100px;padding:8px;">
+	<button id="le_btn">1</button>&nbsp&nbspLedger Name<sup style="color:red;font-weight:bold;">*</sup><br>
+	<input type="text" required="required" id="le_name" placeholder="&nbsp&nbsp Ledger Name" style="width:100%;height:50px;margin-top:2px;">
+	</td>
+	<td style="width:60%;height:100px;padding:8px;">
+	<h3 style="float:right;margin:0;padding:0">Total Opening balance</h3><br><br>
+	<span id="credit" style="float:right;"></span><br>
+	<span id="debit" style="float:right;"></span><br>
+	<hr width="40%" align="right"><br>
+	<h3 style="float:right;margin:0;padding:0">Differences:</h3><br><br>
+	<span id="dif" style="float:right;"></span>
+	</td>
+	</tr>
+	<tr>
+	<td style="width:40%;height:280px;padding:8px;">
+	Under<sup style="color:red;font-weight:bold;">*</sup>
+	<select id="slt" name="group" style="margin-top:4px;width:100%;height:50px;margin-bottom:8px;">
+	<option value="select group">&nbsp&nbspselect group</option>
+	<option value="sales account">sales account</option>
+	<option value="purchase account">purchase account</option>
+	<option value="capital account">capital account</option>
+	<option value="sundry creditors">sundry creditors</option>
+	<option value="sundry debitors">sundry debitors</option>
+	</select>
+	Opening balance<sup style="color:red;font-weight:bold;">*</sup><br><br>
+	<input type="number" required="required" id="le_number" placeholder=" 00.00" style="width:100%;height:50px;margin-bottom:5px;">
+	Mode<sup style="color:red;font-weight:bold;">*</sup><br><br>
+	<input type="text" id="le_mode" required="required" placeholder="&nbsp&nbsp Cr" style="width:100%;height:50px;"
+	</td>
+	<td style="width:60%;height:280px;padding:8px;">
+	<h3 align="center" style="padding:0;margin:0;">Malling Details</h3><br>
+	Name<br><br>
+	<input type="text" id="mailing_name" placeholder="&nbsp&nbsp Ledger name" style="width:50%;height:50px;"><br><br>
+	Address<br><br>
+	
+			<textarea rows="5" name="address" id="adrs"></textarea>
+												
+	</td>
+	</tr>
+	<tr>
+	<table width="100%" border="1" style="border-collapse:collapse;">
+	
+	<tr>
+	<td style="width:100%;height:50px;padding:2px;">
+	<input id="submit" type="submit" value="create now !" style="float:right;width:20%;height:50px;background:black;color:white;font-family:"righteous";font-size:1vw;border:none;">
+	</td>
+	</tr>
+	
+	</table>	
+	
+	</tr>
+	</table>
+	
+	</form>
+	<form class="show" id="Edit" style="display:none;">
+	<table height="400" id="table_create" width="100%" border="1" style="border-collapse:collapse;margin-bottom:5px;">
+	<tr>
+	<td style="width:100%;height:150px;padding:8px;">
+	Search and Edit<br><br>
+	<input type="number" id="edit_no" required="required" placeholder="&nbsp&nbsp Enter Lrdger No" style="width:40%;height:50px;">
+	</td>
+	</tr>
+	<td id="empty" style="width:100%;height:310px;padding:8px;">
+	<table width="100%" height="232" border="1" id="edit_table" style="border-collapse:collapse;display:none;">
+	<tr>
+	<td width="25%" height="20" height="20">
+	<p>ledher-no</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_no"></p>
+	</td>
+	<td width="25%" height="20">
+	<p>ledher-name</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_name"></p>
+	</td>
+	</tr>
+	
+	<tr>
+	<td width="25%" height="20">
+	<p>ledher-group</p>
+	</td>
+	<td width="25%" height="20">
+	<select id="slt_edit" name="group" style="display:none;color:white;background:linear-gradient(red,blue);width:100%;height:100%;">
+	
+	<option value="sales account">sales account</option>
+	<option value="purchase account">purchase account</option>
+	<option value="capital account">capital account</option>
+	<option value="sundry creditors">sundry creditors</option>
+	<option value="sundry debitors">sundry debitors</option>
+	</select>
+	
+	</td>
+	<td width="25%" height="20">
+	<p>ledher-balance</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_balance"></p>
+	</td>
+	</tr>
+	
+	<tr>
+	<td width="25%" height="20">
+	<p>ledher-mode</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_mode"></p>
+	</td>
+	<td width="25%" height="20">
+	<p>ledher-mail</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="mail"></p>
+	</td>
+	</tr>
+	
+	<tr>
+	<td width="25%" height="20">
+	<p>ledher-address</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="venue"></p>
+	<td width="25%">
+	<i title="delete ledger" id="delete" class="fa fa-trash" style="display:none;cursor:pointer;color:white;font-size:2vw; text-align:center;"></i>
+	</td>
+	<td width="25%">
+	<i title="save ledger" id="ledger_btn" class="fa fa-save" style="display:none;cursor:pointer;color:white;font-size:2vw; text-align:center;"></i>
+	</td>
+	</tr>		
+	</table>
+	<h2 id="no" style="color:red;"></h2>
+	</td>
+	<tr>
+	</tr>
+	</table>
+	
+	
+	
+	<h2 id="no" style="color:red;position:absolute;top:200px;left:40%;"></h2>
+	
+	<h1 id="restore" style=:color:red;position:absolute;top:150px;left:15%;color:red;"></h1>
+	
+	
+	</td>
+	<tr>
+	</tr>
+	</table>
+	</form>
+	<form class="show" id="Search" style="display:none;">
+	<table height="400" id="table_create" width="100%" border="1" style="border-collapse:collapse;margin-bottom:5px;">
+	<tr>
+	<td style="width:100%;height:150px;padding:8px;">
+	Search Ledger<br><br>
+	<input type="number" id="re" required="required" placeholder="&nbsp&nbsp Enter Lrdger No" style="width:40%;height:50px;">
+	</td>
+	</tr>
+	<td style="width:100%;height:310px;padding:8px;">
+	<table width="100%" height="232" border="1" id="search_table" style="border-collapse:collapse;display:none;">
+	<tr>
+	<td width="25%" height="20" height="20">
+	<p>ledher-no</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_nos"></p>
+	</td>
+	<td width="25%" height="20">
+	<p>ledher-name</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_names"></p>
+	</td>
+	</tr>
+	
+	<tr>
+	<td width="25%" height="20">
+	<p>ledher-group</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_groups"></p>
+	</td>
+	<td width="25%" height="20">
+	<p>ledher-balance</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_balances"></p>
+	</td>
+	</tr>
+	
+	<tr>
+	<td width="25%" height="20">
+	<p>ledher-mode</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="ledger_modes"></p>
+	</td>
+	<td width="25%" height="20">
+	<p>ledher-mail</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="mails"></p>
+	</td>
+	</tr>
+	
+	<tr>
+	<td width="25%" height="20">
+	<p>ledher-address</p>
+	</td>
+	<td width="25%" height="20">
+	<p id="venues"></p>
+	</td>
+	</tr>		
+	</table>
+	<h2 id="nos" style="color:red;"></h2>
+	</td>
+	<tr>
+	</tr>
+	</table>
+	</form>
+	</div>
+	</fieldset>
+	
+	<script src="ledger.js"></script>
+	<script src="update.js"></script>
+	</body>
+	</html>

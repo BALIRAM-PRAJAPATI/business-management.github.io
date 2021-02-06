@@ -1,0 +1,200 @@
+@charset "utf-8";
+*{box-sizing:border-box;}
+#box_image{
+	width:80px;
+	height:80px;
+	border:1px solid #ccc;
+	box-shadow:0px 0px 8px gray;
+	position:absolute;
+	top:7%;
+	left:2%;
+	border-radius:50%;
+	
+}
+#container{
+	width:30%;
+	height:400px;
+	margin:0 auto;
+	
+	position:relative;
+	top:30px;
+	padding:10px;
+}
+#first_div{
+	width:100%;
+	height:6vw;
+	border:1px solid blue;
+	
+	margin-bottom:25px;
+}
+#second_div{
+	width:100%;
+	height:6vw;
+	border:1px solid blue;
+	
+	margin-bottom:25px;
+}
+#third_div{
+	width:100%;
+	height:6vw;
+	border:1px solid blue;
+	
+	margin-bottom:25px;
+}
+#home,#delete,#logout{
+	font-size:6vw;
+	color:white;
+     float:left;
+	 margin-right:35px;
+	 background:blue;
+	 position:ralative;
+}
+#all{
+    width:25%;
+	height:350px;	
+	position:fixed;
+	top:150px;
+	left:38%;
+	display:none;
+    	
+}
+#form{
+	width:25%;
+	height:0;
+	
+	position:fixed;
+	top:150px;
+	left:38%;
+     	
+}
+#frm{
+	width:25%;
+	height:350px;
+	background:rgba(0,0,0,0.6);
+	position:fixed;
+	top:150px;
+	left:38%;
+	overflow-x:hidden;
+	overflow:scroll;
+	padding:10px;
+	height:350px;
+}
+input{
+	width:100%;
+	height:30px;
+	border:none;
+	padding:7px;
+	margin-bottom:20px;
+}
+#text{
+	width:100%;
+	height:30px;
+	border:none;
+	padding:7px;
+	margin-bottom:20px;
+}
+#select{
+	width:100%;
+	height:30px;
+	border:none;
+	padding:7px;
+	margin-bottom:20px;
+}
+input,#text:focus{
+	outline:none;
+}
+#frm::-webkit-scrollbar{
+	width:10px;
+}
+#frm::-webkit-scrollbar-track{
+	background:rgb(255,116,102);
+}
+#frm::-webkit-scrollbar-thumb{
+	background:yellow;
+	border-radius:50px;
+}
+/*start manage coding*/
+#measure,#voucher,#shut,#tax{
+	width:100%;
+	height:70px;
+	border:1px solid #ccc;
+	box-shadow:0px 0px 10px gray;
+	float:left;
+	margin-bottom:27px;
+	padding:13px;
+	cursor:pointer
+	position:relative;
+}
+#balance,#sales,#close,#setup{
+	font-size:3vw;	
+}
+#shut:hover{
+	background:black;
+	color:white;
+	border-radius:50px;
+	transition:1s;
+}
+#measure:hover{
+	background:black;
+	color:white;
+	border-radius:50px;
+	transition:1s;
+}
+#voucher:hover{
+	background:black;
+	color:white;
+	border-radius:50px;
+	transition:1s;
+}
+#tax:hover{
+	background:black;
+	color:white;
+	border-radius:50px;
+	transition:1s;
+}
+#one,#two,#three,#four{
+	width:100%;
+	height:4vw;
+	border:1px solid #323232;
+	position:relative;
+	margin-bottom:8px;	
+}
+#voucher_box::-webkit-scrollbar{
+	width:1vw;
+}
+#voucher_box::-webkit-scrollbar-track{
+	background:rgb(255,116,102);
+}
+#voucher_box::-webkit-scrollbar-thumb{
+	background:yellow;
+	border-radius:20px;
+}
+#list{
+	width:16.5%;
+	
+	
+	background:black;
+	color:white;
+}
+#ram{
+	width:16.5%;
+	border:1px solid black;
+	color:black;
+}
+#main::-webkit-scrollbar{
+	width:1vw;
+}
+#main::-webkit-scrollbar-track{
+	background:rgb(255,116,102);
+}
+#main::-webkit-scrollbar-thumb{
+	background:green;
+	border-radius:1vw;
+}
+@media print{
+	body{
+		color:black;
+		font_weight:bold;
+	}
+}
+/*end manage coding*/
